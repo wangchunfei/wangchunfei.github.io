@@ -96,7 +96,7 @@
 <meta name="description" content="用力呼吸证明我还活着">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wcf&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://wangchunfei.me/index.html">
 <meta property="og:site_name" content="Wcf&#39;s Notes">
 <meta property="og:description" content="用力呼吸证明我还活着">
 <meta name="twitter:card" content="summary">
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://wangchunfei.me/"/>
 
 
 
@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/Markdown-语法的简要规则/">
+    <link itemprop="mainEntityOfPage" href="http://wangchunfei.me/2017/06/29/Markdown-语法的简要规则/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chunfei Wang">
@@ -377,67 +377,16 @@
       
         
           
-            <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a><font color="blue">标题</font></h2><p>标题是每篇文章都需要也是最常用的格式，在 Markdown 中，如果一段文字被定义为标题，只要在这段文字前加 # 号即可。以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 一级标题 </div><div class="line"></div><div class="line">## 二级标题  </div><div class="line"></div><div class="line">### 三级标题</div></pre></td></tr></table></figure></p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a><font color="blue">列表</font></h2><p>列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加1. 2. 3. 符号要和文字之间加上一个字符的空格。</p>
-<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-</ul>
-<ol>
-<li>一</li>
-<li>二</li>
-<li>三</li>
-</ol>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a><font color="blue">引用</font></h2><p>只需要在文本前加入 &gt; 这种尖括号（大于号）即可</p>
-<blockquote>
-<p>这里是引用<br>yy</p>
-</blockquote>
-<h2 id="表格（原生不支持）"><a href="#表格（原生不支持）" class="headerlink" title="表格（原生不支持）"></a><font color="blue">表格（原生不支持）</font></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Tables        | Are           | Cool  |</div><div class="line">| ------------- |:-------------:| -----:|</div><div class="line">| col 3 is      | right-aligned | $1600 |</div><div class="line">| col 2 is      | centered      |   $12 |</div><div class="line">| zebra stripes | are neat      |    $1 |</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a><font color="blue">代码框</font></h2><p>只需要用三个 ` 把中间的代码包裹起来<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkPermissions</span><span class="params">(RxPermissions rxPermissions)</span> </span>&#123;</div><div class="line">     addSubscribe(rxPermissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE)</div><div class="line">             .subscribe(<span class="keyword">new</span> Consumer&lt;Boolean&gt;() &#123;</div><div class="line">                 <span class="meta">@Override</span></div><div class="line">                 <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Boolean granted)</span> </span>&#123;</div><div class="line">                     <span class="keyword">if</span> (granted) &#123;</div><div class="line">                         mView.startDownloadService();</div><div class="line">                     &#125; <span class="keyword">else</span> &#123;</div><div class="line">                         mView.showErrorMsg(<span class="string">"下载应用需要文件写入权限哦~"</span>);</div><div class="line">                     &#125;</div><div class="line">                 &#125;</div><div class="line">             &#125;)</div><div class="line">     );</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a><font color="blue">链接</font></h2><p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[百度](http://www.baidu.com)</div></pre></td></tr></table></figure></p>
-<p><a href="http://www.baidu.com" target="_blank" rel="external">百度</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a><font color="blue">图片</font></h2><p>插入图片的地址需要图床</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![]()&#123;ImgCap&#125;&#123;/ImgCap&#125;</div></pre></td></tr></table></figure>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![111](http://ww1.sinaimg.cn/large/6aee7dbbgw1effeaclhiyj20eh09cwez.jpg)</div></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/6aee7dbbgw1effeaclhiyj20eh09cwez.jpg" alt="111"></p>
-<h2 id="粗体与斜体"><a href="#粗体与斜体" class="headerlink" title="粗体与斜体"></a><font color="blue">粗体与斜体</font></h2><p>Markdown 的粗体和斜体也非常简单，用两个星包含一段文本就是粗体的语法，用一个星包含一段文本就是斜体的语法(部分地方不可用)。<br><strong> 这里是粗体 </strong></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a><font color="blue">分割线</font></h2><p>分割线的语法只需要三个 * 号</p>
-<hr>
-<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a><font color="blue">颜色</font></h2><p>例：<font color="red">红色</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;font color=red&gt;红色&lt;/font&gt;</div></pre></td></tr></table></figure>
-<h2 id="附：MarkdownPad注册码"><a href="#附：MarkdownPad注册码" class="headerlink" title="附：MarkdownPad注册码"></a>附：MarkdownPad注册码</h2><p>邮箱：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Soar360@live.com</div></pre></td></tr></table></figure></p>
-<p>授权秘钥： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</div></pre></td></tr></table></figure>
-
-          
+          标题标题是每篇文章都需要也是最常用的格式，在 Markdown 中，如果一段文字被定义为标题，只要在这段文字前加 # 号即可。以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。12345# 一级标题 ## 二级标题  ### 三级标题
+列表列表的显示只需要在文字前
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/29/Markdown-语法的简要规则/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -479,7 +428,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://wangchunfei.me/2017/06/28/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chunfei Wang">
@@ -580,9 +529,16 @@
       
         
           
-            <p>111</p>
+          111
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/28/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
