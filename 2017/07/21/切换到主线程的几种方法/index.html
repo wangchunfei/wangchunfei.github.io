@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="方法一： view.post(Runnable action)` textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgr">
+<meta name="description" content="方法一： view.post(Runnable action)textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgrou">
 <meta name="keywords" content="Android,线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="切换到主线程的几种方法">
 <meta property="og:url" content="http://wangchunfei.me/2017/07/21/切换到主线程的几种方法/index.html">
 <meta property="og:site_name" content="Wcf&#39;s Notes">
-<meta property="og:description" content="方法一： view.post(Runnable action)` textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgr">
-<meta property="og:updated_time" content="2017-07-21T06:37:33.282Z">
+<meta property="og:description" content="方法一： view.post(Runnable action)textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgrou">
+<meta property="og:updated_time" content="2017-07-21T06:41:32.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="切换到主线程的几种方法">
-<meta name="twitter:description" content="方法一： view.post(Runnable action)` textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgr">
+<meta name="twitter:description" content="方法一： view.post(Runnable action)textView.post(new Runnable() {     @Override     public void run() {         textView.setText(&amp;quot;更新textView&amp;quot;);         //还可以更新其他的控件         imageView.setBackgrou">
 
 
 
@@ -388,8 +388,7 @@
       
 
       
-        <h2 id="方法一：-view-post-Runnable-action"><a href="#方法一：-view-post-Runnable-action" class="headerlink" title="方法一： view.post(Runnable action)"></a>方法一： view.post(Runnable action)</h2><p>`</p>
-<pre><code>textView.post(new Runnable() {
+        <h2 id="方法一：-view-post-Runnable-action"><a href="#方法一：-view-post-Runnable-action" class="headerlink" title="方法一： view.post(Runnable action)"></a>方法一： view.post(Runnable action)</h2><pre><code>textView.post(new Runnable() {
     @Override
     public void run() {
         textView.setText(&quot;更新textView&quot;);
@@ -397,25 +396,20 @@
         imageView.setBackgroundResource(R.drawable.update);
     }
 });
-</code></pre><p>`</p>
-<h2 id="方法二：-activity-runOnUiThread-Runnable-action"><a href="#方法二：-activity-runOnUiThread-Runnable-action" class="headerlink" title="方法二： activity.runOnUiThread(Runnable action)"></a>方法二： activity.runOnUiThread(Runnable action)</h2><p>`</p>
-<pre><code> ((MainActivity) context).runOnUiThread(new Runnable() {
+</code></pre><h2 id="方法二：-activity-runOnUiThread-Runnable-action"><a href="#方法二：-activity-runOnUiThread-Runnable-action" class="headerlink" title="方法二： activity.runOnUiThread(Runnable action)"></a>方法二： activity.runOnUiThread(Runnable action)</h2><pre><code>((MainActivity) context).runOnUiThread(new Runnable() {
     @Override
     public void run() {
-        //此时已在主线程中，可以更新UI了
+    //此时已在主线程中，可以更新UI了
     }
 });
-</code></pre><p>`</p>
-<h2 id="方法三：-Handler机制"><a href="#方法三：-Handler机制" class="headerlink" title="方法三： Handler机制"></a>方法三： Handler机制</h2><p>`</p>
-<pre><code>Handler mainHandler = new Handler(Looper.getMainLooper());
+</code></pre><h2 id="方法三：-Handler机制"><a href="#方法三：-Handler机制" class="headerlink" title="方法三： Handler机制"></a>方法三： Handler机制</h2><pre><code>Handler mainHandler = new Handler(Looper.getMainLooper());
 mainHandler.post(new Runnable() {
     @Override
     public void run() {
         //已在主线程中，可以更新UI
     }
 });
-</code></pre><p>`</p>
-
+</code></pre>
       
     </div>
 
