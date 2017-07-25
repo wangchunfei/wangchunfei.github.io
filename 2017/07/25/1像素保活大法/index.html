@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:1234567891011121314151617181920212223242526272829303132333435363738394041public class HooliganActivity extends Activity &amp;#123;    private static HooliganA">
+<meta name="description" content="1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:`     public class HooliganActivity extends Activity {        private static HooliganActivity instance;     @Override     protected void onCreate(Bundle">
 <meta name="keywords" content="Android,保活">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一像素保活大法">
 <meta property="og:url" content="http://wangchunfei.me/2017/07/25/1像素保活大法/index.html">
 <meta property="og:site_name" content="Wcf&#39;s Notes">
-<meta property="og:description" content="新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:1234567891011121314151617181920212223242526272829303132333435363738394041public class HooliganActivity extends Activity &amp;#123;    private static HooliganA">
-<meta property="og:updated_time" content="2017-07-25T02:27:12.745Z">
+<meta property="og:description" content="1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:`     public class HooliganActivity extends Activity {        private static HooliganActivity instance;     @Override     protected void onCreate(Bundle">
+<meta property="og:updated_time" content="2017-07-25T02:45:14.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一像素保活大法">
-<meta name="twitter:description" content="新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:1234567891011121314151617181920212223242526272829303132333435363738394041public class HooliganActivity extends Activity &amp;#123;    private static HooliganA">
+<meta name="twitter:description" content="1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:`     public class HooliganActivity extends Activity {        private static HooliganActivity instance;     @Override     protected void onCreate(Bundle">
 
 
 
@@ -388,7 +388,82 @@
       
 
       
-        <h2 id="新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity"><a href="#新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity" class="headerlink" title="新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:"></a>新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">public class HooliganActivity extends Activity &#123;</div><div class="line">    private static HooliganActivity instance;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        instance = this;</div><div class="line">        Window window = getWindow();</div><div class="line">        window.setGravity(Gravity.LEFT | Gravity.TOP);</div><div class="line">        WindowManager.LayoutParams params = window.getAttributes();</div><div class="line">        params.x = 0;</div><div class="line">        params.y = 0;</div><div class="line">        params.height = 1;</div><div class="line">        params.width = 1;</div><div class="line">        window.setAttributes(params);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 开启保活页面</div><div class="line">     */</div><div class="line">    public static void startHooligan() &#123;</div><div class="line">        Intent intent = new Intent(DWApplication.getAppContext(), HooliganActivity.class);</div><div class="line">        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</div><div class="line">        DWApplication.getAppContext().startActivity(intent);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onDestroy() &#123;</div><div class="line">        super.onDestroy();</div><div class="line">        instance = null;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 关闭保活页面</div><div class="line">     */</div><div class="line">    public static void killHooligan() &#123;</div><div class="line">        if(instance != null) &#123;</div><div class="line">            instance.finish();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h3 id="1-新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity"><a href="#1-新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity" class="headerlink" title="1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:"></a>1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:</h3><p>`<br>     public class HooliganActivity extends Activity {<br>        private static HooliganActivity instance;</p>
+<pre><code>    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        instance = this;
+        Window window = getWindow();
+        window.setGravity(Gravity.LEFT | Gravity.TOP);
+        WindowManager.LayoutParams params = window.getAttributes();
+        params.x = 0;
+        params.y = 0;
+        params.height = 1;
+        params.width = 1;
+        window.setAttributes(params);
+    }
+
+    /**
+     * 开启保活页面
+     */
+    public static void startHooligan() {
+        Intent intent = new Intent(DWApplication.getAppContext(), HooliganActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        DWApplication.getAppContext().startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        instance = null;
+    }
+
+    /**
+     * 关闭保活页面
+     */
+    public static void killHooligan() {
+        if(instance != null) {
+            instance.finish();
+        }
+    }
+}
+</code></pre><p>`</p>
+<h3 id="2-注册清单文件："><a href="#2-注册清单文件：" class="headerlink" title="2.注册清单文件："></a>2.注册清单文件：</h3><p><code>&lt;activity android:name=&quot;.activity.HooliganActivity&quot;
+    android:configChanges=&quot;keyboardHidden|orientation|screenSize|navigation|keyboard&quot;
+    android:excludeFromRecents=&quot;true&quot;
+    android:exported=&quot;false&quot;
+    android:finishOnTaskLaunch=&quot;false&quot;
+    android:launchMode=&quot;singleInstance&quot;
+    android:theme=&quot;@style/HooliganActivityStyle&quot;/&gt;</code><br><code>&lt;style name=&quot;HooliganActivityStyle&quot;&gt;
+        &lt;item name=&quot;android:windowBackground&quot;&gt;@color/transparent&lt;/item&gt;
+        &lt;item name=&quot;android:windowContentOverlay&quot;&gt;@null&lt;/item&gt;
+        &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:windowNoDisplay&quot;&gt;false&lt;/item&gt;
+        &lt;item name=&quot;android:windowDisablePreview&quot;&gt;true&lt;/item&gt;
+    &lt;/style&gt;</code></p>
+<h3 id="3-监听锁屏和解锁通知，不能静态注册广播，只能动态注册："><a href="#3-监听锁屏和解锁通知，不能静态注册广播，只能动态注册：" class="headerlink" title="3.监听锁屏和解锁通知，不能静态注册广播，只能动态注册："></a>3.监听锁屏和解锁通知，不能静态注册广播，只能动态注册：</h3><p><code>IntentFilter filter = new IntentFilter();
+    filter.addAction(Intent.ACTION_SCREEN_ON);
+    filter.addAction(Intent.ACTION_SCREEN_OFF);
+    registerReceiver(new BootCompleteReceiver(),filter);</code></p>
+<h3 id="4-分别在解锁和锁屏时唤醒我的HooliganActivity："><a href="#4-分别在解锁和锁屏时唤醒我的HooliganActivity：" class="headerlink" title="4.分别在解锁和锁屏时唤醒我的HooliganActivity："></a>4.分别在解锁和锁屏时唤醒我的HooliganActivity：</h3><p><code>public class BootCompleteReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+                HooliganActivity. startHooligan();
+            } else if(intent.getAction().equals(Intent.ACTION_SCREEN_ON)){
+                HooliganActivity. killHooligan();
+            }
+        }
+    }</code></p>
+<h3 id="5-在最近使用的列表中隐藏应用"><a href="#5-在最近使用的列表中隐藏应用" class="headerlink" title="5.在最近使用的列表中隐藏应用"></a>5.在最近使用的列表中隐藏应用</h3><p>当按返回键退出应用时，不是<br><code>Process.killProcess(Process.myPid());</code><br>和<br><code>System.exit(0);</code><br>而是<br><code>Intent intent = new Intent(Intent.ACTION_MAIN);
+    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    intent.addCategory(Intent.CATEGORY_HOME);
+    getAppContext().startActivity(intent);</code></p>
+<p>并且在清单文件的Activity中加入了<br><code>android:excludeFromRecents=&quot;true&quot;</code></p>
+<p>至此，整个的保活就结束了<br>这样你在后台每次锁屏，实际上都会吊起一个一像素的页面，假装app在前台，拥有最高进程优先级。</p>
+<blockquote>
+<p>技术无罪。<br>                               ——王欣</p>
+</blockquote>
 
       
     </div>
@@ -605,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity"><span class="nav-number">1.</span> <span class="nav-text">新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity"><span class="nav-number">1.</span> <span class="nav-text">1.新建一个Activity，作为1像素页面的主体，我姑且叫它HooliganActivity:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-注册清单文件："><span class="nav-number">2.</span> <span class="nav-text">2.注册清单文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-监听锁屏和解锁通知，不能静态注册广播，只能动态注册："><span class="nav-number">3.</span> <span class="nav-text">3.监听锁屏和解锁通知，不能静态注册广播，只能动态注册：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-分别在解锁和锁屏时唤醒我的HooliganActivity："><span class="nav-number">4.</span> <span class="nav-text">4.分别在解锁和锁屏时唤醒我的HooliganActivity：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-在最近使用的列表中隐藏应用"><span class="nav-number">5.</span> <span class="nav-text">5.在最近使用的列表中隐藏应用</span></a></li></ol></div>
             
 
           </div>
