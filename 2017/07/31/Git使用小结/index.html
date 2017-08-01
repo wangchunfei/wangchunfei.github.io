@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="原文教程：git 廖雪峰 ####安装Git  msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;em">
+<meta name="description" content="原文教程：git 廖雪峰 安装Git msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;email@e">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git使用小结">
 <meta property="og:url" content="http://wangchunfei.me/2017/07/31/Git使用小结/index.html">
 <meta property="og:site_name" content="Wcf&#39;s Notes">
-<meta property="og:description" content="原文教程：git 廖雪峰 ####安装Git  msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;em">
-<meta property="og:updated_time" content="2017-07-31T09:25:10.691Z">
+<meta property="og:description" content="原文教程：git 廖雪峰 安装Git msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;email@e">
+<meta property="og:updated_time" content="2017-08-01T01:26:26.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git使用小结">
-<meta name="twitter:description" content="原文教程：git 廖雪峰 ####安装Git  msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;em">
+<meta name="twitter:description" content="原文教程：git 廖雪峰 安装Git msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。 安装成功后配置： git config --global user.name &amp;quot;Your Name&amp;quot; git config --global user.email &amp;quot;email@e">
 
 
 
@@ -378,8 +378,7 @@
 
       
         <p>原文教程：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">git 廖雪峰</a></p>
-<p>####安装Git</p>
-<ul>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><ul>
 <li>msysgit是Windows版的Git，下载地址<a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a>,网速慢的可以使用<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a>下载。</li>
 <li>安装成功后配置：<ul>
 <li><code>git config --global user.name &quot;Your Name&quot;</code></li>
@@ -388,47 +387,37 @@
 </li>
 <li>注意<code>git config</code>命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</li>
 </ul>
-<p>####本地仓库</p>
-<p>#####创建版本库</p>
-<ul>
+<h4 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h4><h5 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h5><ul>
 <li><code>git init</code>                    // 初始化一个Git仓库</li>
 <li><code>git add -A</code>                  // 加入暂存区</li>
 <li><code>git commit -m &quot;说明&quot;</code>         // 提交到历史版本</li>
 <li><code>git push origin master</code>      // 再推送到远程</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 初始化一个Git仓库，使用git init命令。
+<h6 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 初始化一个Git仓库，使用git init命令。
 * 添加文件到Git仓库，分两步：
     * 第一步，使用命令git add &lt;file&gt;，注意，可反复多次使用，添加多个文件；
     * 第二步，使用命令git commit，完成。
 * 每次修改，如果不add到暂存区，那就不会加入到commit中。
-</code></pre><p>#####查看仓库当前状态</p>
-<ul>
+</code></pre><h5 id="查看仓库当前状态"><a href="#查看仓库当前状态" class="headerlink" title="查看仓库当前状态"></a>查看仓库当前状态</h5><ul>
 <li><code>git status</code></li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 要随时掌握工作区的状态，使用git status命令。
-</code></pre><p>#####查看修改内容</p>
-<ul>
+<h6 id="小结：-1"><a href="#小结：-1" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 要随时掌握工作区的状态，使用git status命令。
+</code></pre><h5 id="查看修改内容"><a href="#查看修改内容" class="headerlink" title="查看修改内容"></a>查看修改内容</h5><ul>
 <li><code>git diff &lt;filename&gt;</code>            //查看修改内容</li>
 <li><code>git diff HEAD --&lt;filename&gt;</code>     //查看工作区与版本库里面最新版本的区别</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
-</code></pre><p>#####版本回退</p>
-<ul>
+<h6 id="小结：-2"><a href="#小结：-2" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+</code></pre><h5 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h5><ul>
 <li><code>git log</code>             //查看提交历史</li>
 <li><code>git reflog</code>          //查看命令历史</li>
 <li><code>git reset --hard HEAD^</code>  //回到上一个版本</li>
 <li><code>git reset --hard &lt;commit id&gt;(版本号)</code>  //回到指定版本</li>
 <li>上一个版本就是HEAD^，上上一个版本就是HEAD^^，往上100个版本 HEAD~100</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+<h6 id="小结：-3"><a href="#小结：-3" class="headerlink" title="小结："></a>小结：</h6><pre><code>* HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
 * 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
 * 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
-</code></pre><p>#####工作区与暂存区</p>
-<ul>
+</code></pre><h5 id="工作区与暂存区"><a href="#工作区与暂存区" class="headerlink" title="工作区与暂存区"></a>工作区与暂存区</h5><ul>
 <li>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
 <li>把文件往Git版本库里添加的时候，是分两步执行的：<ul>
 <li>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
@@ -438,8 +427,7 @@
 <li>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，<code>git commit</code>就是往master分支上提交更改。</li>
 <li>可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</li>
 </ul>
-<p>#####撤销修改</p>
-<ul>
+<h5 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h5><ul>
 <li><code>git checkout -- &lt;file&gt;</code>  //可以丢弃工作区的修改。</li>
 <li>命令<code>git checkout -- &lt;file&gt;</code> 意思就是，把file文件在工作区的修改全部撤销，这里有两种情况：<ul>
 <li>一种是file自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
@@ -453,13 +441,11 @@
 <li><code>git reset</code>命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。</li>
 <li>当改错了东西，还从暂存区提交到了版本库时，可以用 <em>版本回退</em> 回退到上一个版本。前提是还没有把本地版本推送到远程。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 场景1：当改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+<h6 id="小结：-4"><a href="#小结：-4" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 场景1：当改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
 * 场景2：当不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，
         就回到了场景1，第二步按场景1操作。
 * 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，用版本回退，不过前提是没有推送到远程库。
-</code></pre><p>#####删除文件</p>
-<ul>
+</code></pre><h5 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h5><ul>
 <li>当在文件管理器中把没用的文件删了，或者用rm命令删了时，有两种情况：<ul>
 <li>一种是确实要从版本库中删除该文件，那就用命令 <code>git rm &lt;file&gt;</code> 删掉，并且 <code>git commit</code>；</li>
 <li>一种情况是删错了，因为版本库里还有，所以可以用 <code>git checkout -- &lt;file&gt;</code> 把误删的文件恢复到最新版本。</li>
@@ -467,39 +453,31 @@
 </li>
 <li><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么就永远不用担心误删，
+<h6 id="小结：-5"><a href="#小结：-5" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么就永远不用担心误删，
   但是要小心，只能恢复文件到最新版本，会丢失**最近一次提交后修改的内容**
-</code></pre><p>####远程仓库</p>
-<ul>
+</code></pre><h4 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h4><ul>
 <li>设置SS加密：<ul>
 <li>第1步：创建SSH Key。查看用户主目录下是否有.ssh目录，如果有，再看看该目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。<br>如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：<code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>。id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</li>
 <li>第2步：登陆GitHub，打开“Settings”，“SSH and GPG keys”页面：点“New SSH key”,填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。最后点“Add SSH key”,此时应该就可以看到已经添加的Key了。</li>
 </ul>
 </li>
 </ul>
-<p>#####添加远程库（先有本地库，后有远程库）</p>
-<ul>
+<h5 id="添加远程库（先有本地库，后有远程库）"><a href="#添加远程库（先有本地库，后有远程库）" class="headerlink" title="添加远程库（先有本地库，后有远程库）"></a>添加远程库（先有本地库，后有远程库）</h5><ul>
 <li>关联远程库：<code>git remote add origin git@server-name:path/repo-name.git</code>。</li>
 <li>关联后，把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支master推送到远程。</li>
 <li>第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，<br>还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</li>
 <li>把本地master分支的最新修改推送至GitHub：<code>git push origin master</code>。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+<h6 id="小结：-6"><a href="#小结：-6" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
 * 关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 * 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改。
-</code></pre><p>#####从远程库克隆（先有远程库，后有本地库）</p>
-<ul>
+</code></pre><h5 id="从远程库克隆（先有远程库，后有本地库）"><a href="#从远程库克隆（先有远程库，后有本地库）" class="headerlink" title="从远程库克隆（先有远程库，后有本地库）"></a>从远程库克隆（先有远程库，后有本地库）</h5><ul>
 <li>先在GitHub上创建一个新的仓库，然后使用 <code>git clone git@server-name:path/repo-name.git</code> 克隆一个本地库。</li>
 <li>Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议.</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
+<h6 id="小结：-7"><a href="#小结：-7" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
 * Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
-</code></pre><p>####分支管理</p>
-<p>#####创建与合并分支</p>
-<ul>
+</code></pre><h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><h5 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h5><ul>
 <li>在Git里HEAD指向主分支master，而master指向提交，所以HEAD指向的就是当前分支。</li>
 <li>master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点；<br>每次提交，master分支都会向前移动一步，这样，随着不断提交，master分支的线也越来越长。</li>
 <li>当创建新的分支时，例如dev，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上；<br>从现在开始，对工作区的修改和提交就是针对dev分支了，比如新提交一次后，dev指针往前移动一步，而master指针不变。</li>
@@ -509,23 +487,19 @@
 </ul>
 </li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 查看分支：git branch       //git branch命令会列出所有分支，当前分支前面会标一个*号
+<h6 id="小结：-8"><a href="#小结：-8" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 查看分支：git branch       //git branch命令会列出所有分支，当前分支前面会标一个*号
 * 创建分支：git branch &lt;name&gt;
 * 切换分支：git checkout &lt;name&gt;
 * 创建+切换分支：git checkout -b &lt;name&gt;
 * 合并指定分支到当前分支：git merge &lt;name&gt;
 * 删除分支：git branch -d &lt;name&gt;
-</code></pre><p>#####解决冲突</p>
-<ul>
+</code></pre><h5 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h5><ul>
 <li>Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容。</li>
 <li><code>git log --graph --pretty=oneline --abbrev-commit</code>        //查看分支的合并情况</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+<h6 id="小结：-9"><a href="#小结：-9" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 * 用git log --graph命令可以看到分支合并图。
-</code></pre><p>#####分支管理策略</p>
-<ul>
+</code></pre><h5 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h5><ul>
 <li>通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。</li>
 <li>如果要强制禁用Fast forward模式，使用命名<code>git merge --no-ff -m “描述” &lt;branch-name&gt;</code> ，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</li>
 <li>分支管理基本原则：<ul>
@@ -535,11 +509,9 @@
 </ul>
 </li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
+<h6 id="小结：-10"><a href="#小结：-10" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
   而fast forward合并就看不出来曾经做过合并。
-</code></pre><p>#####Bug分支</p>
-<ul>
+</code></pre><h5 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h5><ul>
 <li>软件开发中，bug就像家常便饭一样。在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。</li>
 <li>当需要修复bug而分支上的工作还没完成时，可以用<code>git stash</code>功能将当前的工作现场“储存”起来，等以后恢复现场后继续工作。</li>
 <li>用<code>git stash list</code>查看“储存”起来的工作现场列表。</li>
@@ -550,19 +522,15 @@
 </li>
 <li>可以多次stash，恢复的时候，先用<code>git stash list</code>查看，然后用<code>git stash apply stash@{0}</code>恢复指定的stash</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+<h6 id="小结：-11"><a href="#小结：-11" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
 * 当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
-</code></pre><p>#####Feature分支</p>
-<ul>
+</code></pre><h5 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h5><ul>
 <li>每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</li>
 <li><code>git branch -D &lt;name&gt;</code>  // 强行删除没有合并过的分支。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 开发一个新feature，最好新建一个分支；
+<h6 id="小结：-12"><a href="#小结：-12" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 开发一个新feature，最好新建一个分支；
 * 如果要丢弃一个没有被合并过的分支，可以通过git branch -D &lt;name&gt;强行删除。
-</code></pre><p>#####多人协作</p>
-<ul>
+</code></pre><h5 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h5><ul>
 <li>多人协作的工作模式通常是这样：<ul>
 <li>1、首先，可以试图用<code>git push origin branch-name</code>推送自己的修改；</li>
 <li>2、如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
@@ -572,21 +540,18 @@
 </li>
 <li>如果<code>git pull</code>提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream branch-name origin/branch-name</code>。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 查看远程库信息，使用git remote -v；
+<h6 id="小结：-13"><a href="#小结：-13" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 查看远程库信息，使用git remote -v；
 * 本地新建的分支如果不推送到远程，对其他人就是不可见的；
 * 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
 * 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
 * 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
 * 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
-</code></pre><p>####标签管理</p>
-<ul>
+</code></pre><h4 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h4><ul>
 <li>发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。</li>
 <li>将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。</li>
 <li>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针。</li>
 </ul>
-<p>#####创建标签</p>
-<ul>
+<h5 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h5><ul>
 <li>在Git打标签时，需切换到需要打标签的分支上。</li>
 <li><code>git tag &lt;name&gt;</code>;                       // 打一个新标签，默认标签是打在最新提交的commit上的。</li>
 <li><code>git tag &lt;tagname&gt; &lt;commit id&gt;</code>         // 给指定的版本打一个新标签。</li>
@@ -595,14 +560,12 @@
 <li><code>git tag -a &lt;tagname&gt; -m &quot;描述&quot; &lt;commit id&gt;</code>      // 创建带有说明的标签，用-a指定标签名，-m指定说明文字。</li>
 <li><code>git tag -s &lt;tagname&gt; -m &quot;描述&quot; &lt;commit id&gt;</code>      // 通过-s用私钥签名一个标签。签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 命令git tag &lt;name&gt;用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+<h6 id="小结：-14"><a href="#小结：-14" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 命令git tag &lt;name&gt;用于新建一个标签，默认为HEAD，也可以指定一个commit id；
 * git tag -a &lt;tagname&gt; -m &quot;...&quot; &lt;commit id&gt; 可以指定标签信息；
 * git tag -s &lt;tagname&gt; -m &quot;...&quot; &lt;commit id&gt; 可以用PGP签名标签；
 * 命令git tag可以查看所有标签；
 * 命令git show &lt;taganme&gt;可以查看标签信息。
-</code></pre><p>#####操作标签</p>
-<ul>
+</code></pre><h5 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h5><ul>
 <li><code>git tag -d &lt;tagname&gt;</code>          //删除标签，创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。</li>
 <li><code>git push origin &lt;tagname&gt;</code>     //推送某个标签到远程。</li>
 <li><code>git push origin --tags</code>        //一次性推送全部尚未推送到远程的本地标签。</li>
@@ -612,20 +575,16 @@
 </ul>
 </li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 命令git push origin &lt;tagname&gt;可以推送一个本地标签；
+<h6 id="小结：-15"><a href="#小结：-15" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 命令git push origin &lt;tagname&gt;可以推送一个本地标签；
 * 命令git push origin --tags可以推送全部未推送过的本地标签；
 * 命令git tag -d &lt;tagname&gt;可以删除一个本地标签；
 * 命令git push origin :refs/tags/&lt;tagname&gt;可以删除一个远程标签，需先删除本地标签。
-</code></pre><p>####使用GitHub</p>
-<ul>
+</code></pre><h4 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h4><ul>
 <li>在GitHub上，可以任意Fork开源仓库；</li>
 <li>自己拥有Fork后的仓库的读写权限；</li>
 <li>可以推送pull request给官方仓库来贡献代码。</li>
 </ul>
-<p>####自定义Git</p>
-<p>#####忽略特殊文件</p>
-<ul>
+<h4 id="自定义Git"><a href="#自定义Git" class="headerlink" title="自定义Git"></a>自定义Git</h4><h5 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h5><ul>
 <li>在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</li>
 <li>GitHub已有的各种配置文件，只需要组合一下就可以使用了。在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="external">https://github.com/github/gitignore</a>。</li>
 <li>忽略文件的原则是：<ul>
@@ -637,11 +596,9 @@
 <li>当想添加文件到Git，却被.gitignore忽略，添加不了时，可以用 <code>git add -f &lt;filename&gt;</code> 强制添加。</li>
 <li><code>git check-ignore -v &lt;filename&gt;</code>      //查看.gitignore里那条规则过滤了该文件。</li>
 </ul>
-<p>######小结：</p>
-<pre><code>* 忽略某些文件时，需要编写.gitignore；
+<h6 id="小结：-16"><a href="#小结：-16" class="headerlink" title="小结："></a>小结：</h6><pre><code>* 忽略某些文件时，需要编写.gitignore；
 * .gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理。
-</code></pre><p>#####配置别名</p>
-<ul>
+</code></pre><h5 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h5><ul>
 <li><code>git config --global alias.&lt;别名&gt; &lt;原操作&gt;</code>    //例：<code>git config --global alias.st status</code>配置完后，敲 <code>git st</code> 就相当于<code>git status</code>。</li>
 <li>–global参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。</li>
 <li>配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。</li>
@@ -746,8 +703,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -842,6 +808,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地仓库"><span class="nav-number">2.</span> <span class="nav-text">本地仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">创建版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结："><span class="nav-number">2.1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看仓库当前状态"><span class="nav-number">2.2.</span> <span class="nav-text">查看仓库当前状态</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看修改内容"><span class="nav-number">2.3.</span> <span class="nav-text">查看修改内容</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#版本回退"><span class="nav-number">2.4.</span> <span class="nav-text">版本回退</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工作区与暂存区"><span class="nav-number">2.5.</span> <span class="nav-text">工作区与暂存区</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.6.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-4"><span class="nav-number">2.6.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除文件"><span class="nav-number">2.7.</span> <span class="nav-text">删除文件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-5"><span class="nav-number">2.7.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程仓库"><span class="nav-number">3.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加远程库（先有本地库，后有远程库）"><span class="nav-number">3.1.</span> <span class="nav-text">添加远程库（先有本地库，后有远程库）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-6"><span class="nav-number">3.1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#从远程库克隆（先有远程库，后有本地库）"><span class="nav-number">3.2.</span> <span class="nav-text">从远程库克隆（先有远程库，后有本地库）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-7"><span class="nav-number">3.2.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分支管理"><span class="nav-number">4.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">4.1.</span> <span class="nav-text">创建与合并分支</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-8"><span class="nav-number">4.1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决冲突"><span class="nav-number">4.2.</span> <span class="nav-text">解决冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-9"><span class="nav-number">4.2.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分支管理策略"><span class="nav-number">4.3.</span> <span class="nav-text">分支管理策略</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-10"><span class="nav-number">4.3.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Bug分支"><span class="nav-number">4.4.</span> <span class="nav-text">Bug分支</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-11"><span class="nav-number">4.4.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Feature分支"><span class="nav-number">4.5.</span> <span class="nav-text">Feature分支</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-12"><span class="nav-number">4.5.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多人协作"><span class="nav-number">4.6.</span> <span class="nav-text">多人协作</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-13"><span class="nav-number">4.6.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签管理"><span class="nav-number">5.</span> <span class="nav-text">标签管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建标签"><span class="nav-number">5.1.</span> <span class="nav-text">创建标签</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-14"><span class="nav-number">5.1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作标签"><span class="nav-number">5.2.</span> <span class="nav-text">操作标签</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-15"><span class="nav-number">5.2.1.</span> <span class="nav-text">小结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用GitHub"><span class="nav-number">6.</span> <span class="nav-text">使用GitHub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义Git"><span class="nav-number">7.</span> <span class="nav-text">自定义Git</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#忽略特殊文件"><span class="nav-number">7.1.</span> <span class="nav-text">忽略特殊文件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#小结：-16"><span class="nav-number">7.1.1.</span> <span class="nav-text">小结：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置别名"><span class="nav-number">7.2.</span> <span class="nav-text">配置别名</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
