@@ -365,13 +365,17 @@
 
       
         
-          
-          原文教程：git 廖雪峰
-安装Git
-msysgit是Windows版的Git，下载地址https://git-for-windows.github.io/,网速慢的可以使用国内镜像下载。
-安装成功后配置：
-git config --global user.name &quot;Your Name&
-          ...
+          <p>原文教程：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">git 廖雪峰</a></p>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><ul>
+<li>msysgit是Windows版的Git，下载地址<a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a>,网速慢的可以使用<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="external">国内镜像</a>下载。</li>
+<li>安装成功后配置：<ul>
+<li><code>git config --global user.name &quot;Your Name&quot;</code></li>
+<li><code>git config --global user.email &quot;email@example.com&quot;</code></li>
+</ul>
+</li>
+<li>注意<code>git config</code>命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</li>
+</ul>
+<h4 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h4><h5 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h5>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/07/31/Git使用小结/#more" rel="contents">
@@ -671,19 +675,29 @@ git config --global user.name &quot;Your Name&
       
         
           
-          方法一： view.post(Runnable action)textView.post(new Runnable() {
+            <h2 id="方法一：-view-post-Runnable-action"><a href="#方法一：-view-post-Runnable-action" class="headerlink" title="方法一： view.post(Runnable action)"></a>方法一： view.post(Runnable action)</h2><pre><code>textView.post(new Runnable() {
     @Override
     public void run() {
         textView.setText(&quot;更新textView&quot;);
-
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/21/切换到主线程的几种方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+        //还可以更新其他的控件
+        imageView.setBackgroundResource(R.drawable.update);
+    }
+});
+</code></pre><h2 id="方法二：-activity-runOnUiThread-Runnable-action"><a href="#方法二：-activity-runOnUiThread-Runnable-action" class="headerlink" title="方法二： activity.runOnUiThread(Runnable action)"></a>方法二： activity.runOnUiThread(Runnable action)</h2><pre><code>((MainActivity) context).runOnUiThread(new Runnable() {
+    @Override
+    public void run() {
+    //此时已在主线程中，可以更新UI了
+    }
+});
+</code></pre><h2 id="方法三：-Handler机制"><a href="#方法三：-Handler机制" class="headerlink" title="方法三： Handler机制"></a>方法三： Handler机制</h2><pre><code>Handler mainHandler = new Handler(Looper.getMainLooper());
+mainHandler.post(new Runnable() {
+    @Override
+    public void run() {
+        //已在主线程中，可以更新UI
+    }
+});
+</code></pre>
+          
         
       
     </div>
@@ -814,10 +828,8 @@ git config --global user.name &quot;Your Name&
 
       
         
-          
-          标题标题是每篇文章都需要也是最常用的格式，在 Markdown 中，如果一段文字被定义为标题，只要在这段文字前加 # 号即可。以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。12345# 一级标题 ## 二级标题  ### 三级标题
-列表列表的显示只需要在文字前
-          ...
+          <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a><font color="blue">标题</font></h2><p>标题是每篇文章都需要也是最常用的格式，在 Markdown 中，如果一段文字被定义为标题，只要在这段文字前加 # 号即可。以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 一级标题 </div><div class="line"></div><div class="line">## 二级标题  </div><div class="line"></div><div class="line">### 三级标题</div></pre></td></tr></table></figure></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a><font color="blue">列表</font></h2><p>列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加1. 2. 3. 符号要和文字之间加上一个字符的空格。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/06/29/Markdown-语法的简要规则/#more" rel="contents">
@@ -956,22 +968,17 @@ git config --global user.name &quot;Your Name&
       
         
           
-          突然想写博客了，于是，就有了这个页面。
-谈谈我写博客的主要目的：
+            <p>突然想写博客了，于是，就有了这个页面。</p>
+<p>谈谈我写博客的主要目的：</p>
+<ul>
+<li>积累。积累工作与生活当中的所思所想、所学所获。</li>
+<li>交流。期待你的评论和留言。</li>
+<li>分享。开源共享是我不变的理念。</li>
+</ul>
+<p>打算着重写一些对技术的理解，同时，也会记录一些对生活的感悟，也会定期转载一些个人认为是精品、有营养的文章，以提升博客的整体质量，激励阅读，促进交流。</p>
+<p>希望自己会坚持写下去。</p>
 
-积累。积累工作与生活当中的所思所想、所学所获。
-交流。期待你的评论和留言。
-分享。开源共享是我不变的理念。
-
-打算着重写一些对技术的理解，同时，也会记录一些对生活的感悟，也会定期转载一些个人认为是精品、有营养的文章，以提升博客的整体
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/28/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
